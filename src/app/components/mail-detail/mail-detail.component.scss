@@ -1,4 +1,6 @@
 :host {
+  margin-left: 2px;
+  padding-left:2px;
   @media screen and (min-width: 900px) {
     height: 100% !important;
   }
@@ -24,5 +26,9 @@
   .main-content {
     padding: 2px;
     margin: 2px;
+  }
+  .empty {
+    width: 100% !important;
+    height: 100% !important
   }
 }

@@ -1,6 +1,6 @@
 [
   {
-    "id":1,
+    "id": "1",
     "from": "Angad",
     "to": "Kunal",
     "subject": "Regarding Interview",
@@ -9,7 +9,7 @@
     "read": "true"
   },
   {
-    "id":2,
+    "id":"2",
     "from": "Kunal",
     "to": "Angad",
     "subject": "Regarding Interview",
@@ -18,7 +18,7 @@
     "read": "false"
   },
   {
-    "id":3,
+    "id":"3",
     "from": "Google",
     "to": "Angad",
     "subject": "Password Reset",

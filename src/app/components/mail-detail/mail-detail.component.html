@@ -1,8 +1,10 @@
 <div>
+  <div *ngIf="!id && !emailDetails" class="empty">
+
+  </div>
   <div class="heading-panel">
     <div class="subject">
-      <h1>Hi There</h1>
-      <button type="button"> Delete </button>
+      <h1>{{emailDetails.subject}}</h1>
     </div>
     <div class="sender-details">
       <div> From : Apple </div>
@@ -10,6 +12,7 @@
     </div>
   </div>
   <div class="main-content">
+    {{emailDetails.description}}
     What is Lorem Ipsum?
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
   </div>
