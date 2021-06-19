@@ -1,36 +1,42 @@
 
-<mat-sidenav-container>
+<mat-sidenav-container fullScreen>
   <mat-sidenav mode="side" #sidenav opened position="start">
     <div class="compose">
       <button mat-raised-button color="accent">Compose</button>
     </div>
     <hr/>
+
     <div class="menu-options">
-      <div class="menu-item">
-        <div class="">Inbox</div>
-        <div class="">4</div>
-      </div>
-      <div class="menu-item">
-        <div class="">Sent</div>
-        <div class="">4</div>
-      </div>
-      <div class="menu-item">
-        <div class="">Draft</div>
-        <div class="">4</div>
-      </div>
-      <div class="menu-item">
-        <div class="">Trash</div>
-        <div class="">4</div>
-      </div>
+      <a>
+        <div class="menu-item">
+          <div class="mail-type">Inbox</div>
+          <div class="number">4</div>
+        </div>
+      </a>
+      <a>
+        <div class="menu-item">
+          <div class="mail-type">Sent</div>
+          <div class="number">4</div>
+        </div>
+      </a>
+      <a>
+        <div class="menu-item">
+          <div class="mail-type">Draft</div>
+          <div class="number">4</div>
+        </div>
+      </a>
+      <a>
+        <div class="menu-item">
+          <div class="mail-type">Trash</div>
+          <div class="number">4</div>
+        </div>
+      </a>
     </div>
   </mat-sidenav>
   <mat-sidenav-content>
-
     <div class="main-content">
-      <div class="main-content">
         <app-mail-list></app-mail-list>
         <app-mail-detail></app-mail-detail>
-      </div>
     </div>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
