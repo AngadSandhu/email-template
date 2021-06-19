@@ -1,6 +1,5 @@
-
-<mat-sidenav-container fullScreen>
-  <mat-sidenav mode="side" #sidenav opened position="start">
+<mat-drawer-container class="drawer-container" style="height: 100%; width: 100%;" >
+  <mat-drawer mode="side" opened>
     <div class="compose">
       <button mat-raised-button color="accent">Compose</button>
     </div>
@@ -32,15 +31,21 @@
         </div>
       </a>
     </div>
-  </mat-sidenav>
-  <mat-sidenav-content>
+  </mat-drawer>
+  <mat-drawer-content>
     <div class="main-content">
+      <div class="inbox-list">
         <app-mail-list></app-mail-list>
-        <app-mail-detail></app-mail-detail>
+      </div>
+      <div class="mail-detail-section">
+        <router-outlet></router-outlet>
+      </div>
+      <!-- <app-mail-detail></app-mail-detail> -->
+      <!-- <router-outlet></router-outlet> -->
     </div>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  </mat-drawer-content>
+</mat-drawer-container>
+
 
 <app-footer></app-footer>
 

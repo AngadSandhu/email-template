@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { EmailServiceService } from 'src/app/services/email-service.service';
 
 @Component({
   selector: 'app-mail-detail',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mail-detail.component.scss']
 })
 export class MailDetailComponent implements OnInit {
+  public id: string;
+  public emailDetails: any;
 
-  constructor() { }
+  constructor(private activatedroute:ActivatedRoute, private emailService: EmailServiceService) {
+    this.activatedroute.paramMap.subscribe(params => {
+      this.id = params.get('id');
+    });
+   }
 
   ngOnInit(): void {
+    this.getEmail();
+  }
+
+  getEmail() {
+    this.emailService.getEmails().subscribe(emails=>{
+      this.emailDetails = emails.filter(email=>email.id === this.id);
+    })
   }
 
 }

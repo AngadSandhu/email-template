@@ -8,17 +8,21 @@ import { EmailServiceService } from 'src/app/services/email-service.service';
   styleUrls: ['./mail-list.component.scss']
 })
 export class MailListComponent implements OnInit {
-  public emailList :any;
-  public emptyInbox: boolean;
+  public emails :any;
+  public isEmptyInbox : boolean = true;
 
-  constructor( private mailService : EmailServiceService) { }
+  constructor(private mailService : EmailServiceService) { }
 
   ngOnInit(): void {
     this.mailService.getEmails().subscribe(mails=>{
-      if(mails.length ===0){
-        this.emptyInbox =  true;
+      if(mails.length===0) {
+        this.isEmptyInbox= true;
+      } else {
+        this.isEmptyInbox= false;
+        this.emails = mails;
       }
-      console.log(mails)
+    },error =>{
+      alert ('Oops ! Unable to fetch your email !');
     })
   }
 

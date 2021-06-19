@@ -1,5 +1,23 @@
 <div class="list-container">
-  <div class="mail-list-item ">
-
-  </div>
+    <div *ngIf="isEmptyInbox">
+      <mat-card class="list-item">
+        <mat-card-header>
+           <h4>Nothing to see here ! Good Job</h4>
+        </mat-card-header>
+      </mat-card>
+    </div>
+    <div *ngIf="!isEmptyInbox">
+      <div *ngFor="let email of emails">
+        <mat-card class="list-item">
+          <a [routerLink]="['/email', email.id]">
+          <mat-card-header>
+             <h4>{{email.subject}}</h4>
+          </mat-card-header>
+          <mat-card-content>
+            <p>{{email.from }}</p>
+          </mat-card-content>
+          </a>
+        </mat-card>
+      </div>
+    </div>
 </div>
