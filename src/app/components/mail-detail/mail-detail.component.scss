@@ -1,6 +1,6 @@
 :host {
-  margin-left: 2px;
-  padding-left:2px;
+  margin: 0 2px 2px 4px 0;
+
   @media screen and (min-width: 900px) {
     height: 100% !important;
   }
@@ -8,6 +8,9 @@
     background-color: #e8e8e8;
     height: 150px;
     width: 100%;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 5px;
   }
 
   .subject {
@@ -23,12 +26,21 @@
     margin: 2px 0;
   }
 
-  .main-content {
-    padding: 2px;
-    margin: 2px;
-  }
   .empty {
     width: 100% !important;
     height: 100% !important
+  }
+
+  .details {
+    div {
+      display: flex !important;
+      justify-content: space-between;
+    }
+  }
+
+  .main-content {
+    padding: 5px;
+    margin: 5px;
+    height: 100%;
   }
 }

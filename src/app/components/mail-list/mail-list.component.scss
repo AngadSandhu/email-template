@@ -2,7 +2,7 @@
 
   height: 100% !important;
   .list-container {
-    border : 1px solid black;
+    box-shadow: 2px gray;
     width: 100%;
   }
 
@@ -15,6 +15,27 @@
     }
     a:hover {
       background-color: gray;
+    }
+
+    .mat-card-header, .mat-card-header-text, .mat-card-content {
+      width: 100%;
+    }
+  }
+
+  .green-dot {
+    height: 10px;
+    width: 10px;
+    border: 2px solid green;
+    background-color: green;
+    border-radius: 70%;
+    margin-top: 4px;
+  }
+
+  .details {
+    div {
+      display: flex ;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 
