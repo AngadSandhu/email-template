@@ -1,0 +1,28 @@
+:host {
+  @media screen and (min-width: 900px) {
+    height: 100% !important;
+  }
+  .heading-panel {
+    background-color: #e8e8e8;
+    height: 150px;
+    width: 100%;
+  }
+
+  .subject {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sender-details {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0;
+    margin: 2px 0;
+  }
+
+  .main-content {
+    padding: 2px;
+    margin: 2px;
+  }
+}
