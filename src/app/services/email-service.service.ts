@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EmailServiceService {
+  private emails;
 
   constructor(private http: HttpClient) { }
 
@@ -13,4 +14,16 @@ export class EmailServiceService {
     const mockURL = "assets/mocks/emails.json";
     return this.http.get<any>(mockURL);
   }
+
+  getInboxCount() {
+    const mockURL = "assets/mocks/emails.json";
+    this.http.get(mockURL).subscribe(response=>{
+      if(response!==null|| response!==undefined){
+        this.emails = response;
+      }
+    })
+
+    return this.emails.count;
+  }
+
 }

@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { EmailServiceService } from 'src/app/services/email-service.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { EmailServiceService } from 'src/app/services/email-service.service';
   styleUrls: ['./mail-list.component.scss']
 })
 export class MailListComponent implements OnInit {
+  @Input() readEmail:boolean;
   public emails :any;
   public isEmptyInbox : boolean = true;
 

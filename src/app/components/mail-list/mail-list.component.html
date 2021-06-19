@@ -1,4 +1,7 @@
 <div class="list-container">
+    <mat-card>
+      <h1>Inbox</h1>
+    </mat-card>
     <div *ngIf="isEmptyInbox">
       <mat-card class="list-item">
         <mat-card-header>
@@ -8,11 +11,11 @@
     </div>
     <div *ngIf="!isEmptyInbox">
       <div *ngFor="let email of emails">
-        <mat-card class="list-item">
+        <mat-card class="list-item"  appReadMail>
           <a [routerLink]="['/email', email.id]">
           <mat-card-header>
             <mat-card-title>{{email.subject}}</mat-card-title>
-            <div class="green-dot">
+            <div #Ref class="green-dot">
             </div>
             <mat-card-subtitle>
               <div class="details">

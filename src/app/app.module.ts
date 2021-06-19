@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatIconModule } from "@angular/material/icon";
+import { ReadMailDirective } from './directives/read-mail.directive';
 
 
 const MATERIAL_MODULES = [
@@ -28,7 +29,8 @@ const MATERIAL_MODULES = [
     AppComponent,
     MailListComponent,
     MailDetailComponent,
-    FooterComponent
+    FooterComponent,
+    ReadMailDirective
   ],
   imports: [
     BrowserModule,
