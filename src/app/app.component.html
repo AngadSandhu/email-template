@@ -1,5 +1,40 @@
-<div class="main-content">
-  <app-mail-list></app-mail-list>
-  <app-mail-detail></app-mail-detail>
-</div>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" #sidenav opened position="start">
+    <div class="compose">
+      <button mat-raised-button color="accent">Compose</button>
+    </div>
+    <hr/>
+    <div class="menu-options">
+      <div class="menu-item">
+        <div class="">Inbox</div>
+        <div class="">4</div>
+      </div>
+      <div class="menu-item">
+        <div class="">Sent</div>
+        <div class="">4</div>
+      </div>
+      <div class="menu-item">
+        <div class="">Draft</div>
+        <div class="">4</div>
+      </div>
+      <div class="menu-item">
+        <div class="">Trash</div>
+        <div class="">4</div>
+      </div>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+    <div class="main-content">
+      <div class="main-content">
+        <app-mail-list></app-mail-list>
+        <app-mail-detail></app-mail-detail>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
 <app-footer></app-footer>
+

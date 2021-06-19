@@ -8,6 +8,21 @@ import { MailDetailComponent } from './components/mail-detail/mail-detail.compon
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 
+// Angular Material Modules Imports
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { MatIconModule } from "@angular/material/icon";
+
+
+const MATERIAL_MODULES = [
+  MatCardModule,
+  MatSidenavModule,
+  MatButtonModule,
+  MatIconModule
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MATERIAL_MODULES
   ],
   providers: [],
   bootstrap: [AppComponent]
